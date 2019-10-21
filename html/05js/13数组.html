@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript数组</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*1.创建数组*/
+			var arr1=[];  /*空数组*/
+			var arr2=new Array();  /*空数组*/
+			var arr3=new Array(5); /*创建长度为5的数组,只有一个参数表示数组长度*/
+			var arr4=new Array(5,4,3,2,1,0); /*创建数组时指定元素的值*/
+			var arr5=[5,4,3,2,1,0]; /*创建数组时指定元素的值*/
+			
+			document.write(arr3+"<hr />");
+			
+			/*2.数组长度可以随意添加*/
+			arr5[7]=8;          /*将数组长度变为8*/
+			document.write(arr5+"<hr />");
+			
+			/*3.数组元素的增删操作*/
+			arr5.push("张三");          /*在数组尾部添加一个元素*/
+			arr5.unshift("李四","王五");  /*在数组头部添加指定个数的元素*/
+			document.write(arr5+"<hr />");
+			
+			delete arr5[2];      /*删除一个元素的值，但是数组的长度没变*/
+			document.write(arr5+"<hr />");
+			
+			arr5.pop();          /*删除最后一个元素，数组长度减小*/
+			document.write(arr5+"<hr />");
+			
+			arr5.shift();        /*删除数组开头的元素*/
+			document.write(arr5+"<hr />");
+			
+			document.write(arr5.length+"<hr />");
+			
+			/*4.数组遍历*/
+			var arr6=new Array(5);
+			for(var i=0;i<arr6.length;i++){
+				arr6[i]="2000"+i;
+			}
+			document.write(arr6+"<hr />");
+			for(var i in arr6){  /*for(n in set)循环时，n是数组下标*/
+				arr6[i]="3000"+i;
+			}
+			document.write(arr6+"<hr />");
+			
+			/*5.合并数组concat()*/
+			var a1=[1,2,3];
+			var a2=[4,5,6];
+			var a3=a1.concat(a2)  /*将a2放在a1的末尾连接返回新数组，a1、a2不变*/
+			document.write("a1:"+a1+"<hr />");
+			document.write("a2:"+a2+"<hr />");
+			document.write("a3:"+a3+"<hr />");
+			
+			/*6.join方法，将数组元素连接成一个字符串，连接符可以自定义*/
+			var names=["张三","李四","王五"];
+			var strs=names.join("||");   /*参数是连接符*/
+			document.write(strs+"<hr />");
+			var strs1=names.toString();   /*将数组元素连接成一个字符串，连接符为逗号*/
+			document.write(strs1+"<hr />");  
+			
+			/*7.reverse方法：反转数组*/
+			names.reverse();    /*反转数组会将原数组改变*/
+			document.write(names+"<hr />");
+			
+			/*8.排序sort*/
+			var a4=[3,1,7,5,15,35];
+			a4.sort();    /*升序排列，比较时是按字符串比较的，不是按数字比较，得到的是1,15,3,35,5,7*/
+			document.write(a4+"<hr />");
+			/*数字排序*/
+			a4.sort(function(a,b){return a-b;});  /*数字的升序排序*/
+			document.write(a4+"<hr />");
+			a4.sort(function(a,b){return b-a;});  /*数字的降序排序*/
+			document.write(a4+"<hr />");
+			
+			/*9.slice方法*/
+			var a5=[1,2,3,4,5,6];
+			var a6=a5.slice(1,4);   /*不填参数表示复制整个数组，填参数时复制[begin,end)范围元素*/
+			document.write(a6+"<hr />");
+			
+			/*10.数组的复制*/
+			var a=[1,2,3];
+			var b=a;       /*b得到的是a的引用，a和b的元素在内存中是同一份*/
+			b[2]=88;
+			document.write("a:"+a+"<hr />");
+			document.write("b:"+b+"<hr />");
+			
+			var c=a.slice();       /*c和a存放在不同的位置，c将a的元素复制了一遍，a和c互相不影响*/
+			c[2]=9
+			document.write("a:"+a+"<hr />");
+			document.write("c:"+c+"<hr />");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			try{
+				alert("滚犊子！");/*检查是否有异常的语句块*/
+			}catch(e){/*捕捉到的异常放在e里*/
+				document.write(e.message);/*捕捉到异常后执行此句话*/
+			}
+			finally{
+				document.write("<hr />");/*无论是否有异常都会执行finally*/
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动</title>
+		<style type="text/css">
+			#outer{
+				width: 600px;
+				height: 600px;
+				border: 1px solid black;
+			}
+			#outer div{
+				width: 200px;
+				height: 200px;
+				/*float: right;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div style="background-color: bisque;float: left;">1</div><!--1浮起来把2盖住，但是文字不变-->
+			<div style="background-color: red;">2</div>
+			<div style="background-color: blue;">3</div>
+			<div style="background-color: greenyellow;">4</div>
+		</div>
+	</body>
+</html>

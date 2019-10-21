@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var myNumber=123;   /*number类型*/
+			var name="zhangsan";/*string类型*/
+			var bFlag=true;/*boolean类型*/
+			var obj=null;/*null类型*/
+			var und;/*undefined类型，未定义类型*/
+			document.write("myNumber的类型：",typeof(myNumber),"<br />");
+			document.write("name的类型：",typeof(name),"<br />");
+			document.write("bFlag的类型：",typeof(bFlag),"<br />");
+			document.write("obj的类型：",typeof(obj),"<br />");
+			document.write("und的类型：",typeof(und),"<br />");
+			document.write("<hr />");
+			/*数据类型的转换*/
+			var num1=5.6;
+			document.write(parseInt(num1)+"<br />");    /*parseInt()直接舍弃小数部分，不做四舍五入*/
+			/*字符串转化成数字时要求以数字开头，从不是数字的部分开始被舍弃*/
+			/*若非数字开头，parseInt和parseFloat得到的是NaN*/
+			/*parseInt和parseFloat的参数只能是数字或string*/
+			var str1="5.6";
+			document.write(parseInt(str1)+"<br />");
+			var str2="1869.05,hello";                   
+			document.write(parseInt(str2)+"<br />");
+			document.write(parseFloat(str2)+"<br />");
+			document.write("<hr />");
+			/*Number函数，可以将任意类型转换成数字,若字符串中有非数字出现得到NaN*/
+			document.write(Number(true)+"<br />");
+			document.write(Number(25)+"<br />");
+			document.write(Number(null)+"<br />");
+			document.write(Number(undefined)+"<br />");
+			document.write(Number(str1)+"<br />");
+			document.write(Number(str2)+"<br />");
+			document.write("<hr />");
+			/*xx.toString()，将xx转换成字符串*/
+			var var1=5.6;
+			var var2=var1.toString();           /*var1还是number，var2是string*/
+			document.write(typeof(var2)+"<br />")
+			document.write("<hr />");
+			/*隐式类型转换*/
+			var n1=6;
+			var n2="12";
+			var n3=n1+n2;   /*n1被转换成了字符串*/
+			document.write(n3+"<br />");
+			document.write("<hr />");
+		</script>
+	</body>
+</html>

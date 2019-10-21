@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>外边距合并</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#outer{
+				width: 300px;
+				height: 300px;
+				margin-top: 20px;
+				background-color: red;
+				/*padding-top: 10px;*/
+			}
+			#inner{
+				width: 100px;
+				height: 100px;
+				margin-top: 30px;
+				background-color: blue;
+			}
+			p{
+				font-size: 18px;
+				font-family: "微软雅黑";
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="inner"></div>
+		</div>
+		<p>outer和inner外边距合并，导致inner顶部和outer贴在一起</p>
+		<p>要想inner和outer顶部留有空隙，需要给outer加padding</p>
+	</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>极客学院</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			a{text-decoration: none;}
+			li{list-style: none;}
+			body{
+				background-color:#f4f4f4 ;
+			}
+			#header{width: 100%;height: 70px;background-color: white;}
+			#text{width: 80%;margin: 0 auto;}
+			.image-1{margin: 20px 20px 20px 0;float: left;}
+			#nav{text-align: center;float: left;width: 490px;height: 100%;line-height: 70px;}
+			.header-1{float: left;}
+			.header-1 li{width: 40px;height: 100%;padding-right: 32px;list-style: none;float: left;}
+			#select-1{line-height: 70px;float: left;}
+			#search-1{line-height: 70px;}
+			#select-2{line-height: 70px;float: right;}
+			#main{box-sizing: border-box;width: 100%;min-height: 500px;}
+			#background-image{overflow: hidden;width: 100%;height: 360;padding-left: 300px;padding-right: 300px;background-image: url(../../img/7c397271-c5a7-4d29-a074-f1d6b26b17fd.jpg);background-repeat: no-repeat;box-sizing: border-box;margin: 0 auto;}
+			/*#background-image a div{
+				height: 360px;
+				width: 100%;
+			}*/
+			#background-image div ul{/*float: left;*/opacity: 0.8;list-style: none;padding: 0 20px 0 20px;color: white;background-color: black;width: 210px;height: 360px;}
+			#background-image ul li{border-bottom: 1px solid silver;line-height: 45px;width: 100%;height: 45px;}
+			#background-image ul li a{color: white;}
+			#background-image ul li span{float: right;}
+			#san{margin-top: 20px;height: 120px;display: flex;flex-direction: row;justify-content: center;}
+			#san img{margin: 0 5px 0 5px;}
+			#footer{width: 100%;height: 153px;}
+			#center-img{min-height: 157px;box-sizing: border-box;}
+			#center-img ul{margin-top: 20px;height: 250px;display: flex;flex-direction: row; justify-content: center;}
+			#center-img ul li p{padding: 10px 15px 0 15px;margin-bottom: 5px;text-align: center;}
+			#center-img ul li{margin: 0 10px 0 10px;background-color: white;height: 240px;}
+			#center-img img{width: 235px;height: 157px;}
+			#touxiang{padding-left: 250px;padding-right: 300px;margin: 0 auto;}
+			#touxiang li{float: left;margin: 10px 10px;padding: 10px;text-align: center;background-color: white;}
+			#touxiang li h3{font-size: 14px;color: #A9A9A9;}
+			#bottom-image{overflow: hidden;/*padding-left: 250px;*//*padding-right: 200px;*/margin: 0 auto;width: 1000px;height: 410px;box-sizing: border-box;}
+			#bottom-image li{width: 120px;height: 100px;float: left;margin: 10px 5px;padding: 10px;text-align: center;background-color: white;}
+			#bottom-image li h3,span{font-size: 14px;color: #A9A9A9;}
+			#lllllll{height: 250px; width: 100%;overflow: hidden; box-sizing: border-box;} 
+			#lllllll ul{width: 1000px;height: 200px;margin: 0 auto;}
+			#ke1{width: 327px;height: 130px;}
+			#ke2{width: 327px;height: 70px;}
+			#lllllll li{float: left;width: 330px;min-height: 240px;background-color: white;margin-right: 10px;}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div id="text">
+				<img src="../../img/logo.png" class="image-1" width="100"/>
+			<div id="nav">
+				<ul class="header-1">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">职业</a></li>
+					<li><a href="#">课程</a></li>
+					<li><a href="#">企业</a></li>
+					<li><a href="#">社区</a></li>
+				</ul>
+			</div>
+			<div id="select-1">
+				<input type="search" name="" id="search-1" />
+				<span id="span-1">#</span>
+			</div>
+			<div id="select-2">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+			</div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="background-image">
+				<div style="float: left;">
+					<ul>
+					<li>
+						<div><a href="#">前端开发<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">移动开发<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">后端开发<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">人工智能<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">智能硬件/物联网<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">设计/产品/测试<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">云计算/大数据<span>></span></a></div>
+					</li>
+					<li>
+						<div><a href="#">技术支撑<span>></span></a></div>
+					</li>
+				</ul>
+				</div>
+				<div style="float: right;">
+					<!--<h3 style="background-color: white;text-align: center;">极客头条</h3>-->
+					<ul>
+						<li>
+							<p><a href="#">VIP新课 | 简介WordPress中的PHP</a></p>
+						</li>
+						<li>
+							<p><a href="#">VIP新课 | 案例解析</a></p>
+						</li>
+						<li>
+							<p><a href="#">VIP新课 | 文件上传</a></p>
+						</li>
+						<li>
+							<p><a href="#">VIP新课 | 跳转方式介绍</a></p>
+						</li>
+						<li>
+							<p><a href="#">VIP新课 | Servlet常用对象剖析</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="san">
+				<a href="#"><img src="../../img/33286b4e-ce74-46ac-ba47-07caf2256718.jpg"/></a>
+				<a href="#"><img src="../../极客学院/0dd1a43d-dc69-462f-899b-c357e4f1e668.jpg"/></a>
+				<a href="#"><img src="../../极客学院/60cf305b-bbea-4607-b0ee-c4341310ddc9.jpg"/></a>
+			</div>
+			<h2 style="height: 60px;font-size: 17px;line-height: 60px;padding-left: 300px;">最新课程</h2>
+			<div id="center-img">
+				<ul>
+					<li><a href="#">
+							<img src="../../极客学院/course/cf742662-6d60-43e1-8eac-fe2f75575551.jpg" alt="" />
+							<p><a href="#">PHP文件操作详解</a></p>
+							<p><a href="#">中级<span>|</span>5门课</a></p>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/course/6b054a1a-3ed0-4860-a97d-ade52fb3a54e.jpg" alt="" />
+							<p><a href="#">终级实战</a></p>
+							<p><a href="#">中级<span>|</span>3门课</a></p>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/course/20d5be49-8c50-44b3-9bb4-333718eded37.jpg" alt="" />
+							<p><a href="#">Python Web开发基础篇</a></p>
+							<p><a href="#">中级<span>|</span>7门课</a></p>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/course/d1397cac-1b32-4b76-ba5c-600dc495d102.jpg" alt="" />
+							<p><a href="#">Python CGI编程基础</a></p>
+							<p><a href="#">中级<span>|</span>4门课</a></p>
+						</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2 style="height: 60px;font-size: 17px;line-height: 60px;padding-left: 300px;">职业方向</h2>
+				<ul style="width: 1000px;height: 310px;" id="touxiang">
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/career/41f60ad5-db13-416e-ad37-08495dbc0377.png" alt="" width="160" height="96"/>
+							<h3>前端工程师</h3>
+						</a></li>
+				</ul>
+			</div>
+			<div style="width: 100%;min-height: 500px;">
+				<h2 style="height: 60px;font-size: 17px;line-height: 60px;float: left;">知识体系</h2>
+				<ul id="bottom-image">
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+					<li><a href="#">
+							<img src="../../极客学院/knowledge/595b8805ce869.png" alt="" />
+							<h3>Unity3D</h3>
+							<span>45门课程</span>
+						</a></li>
+				</ul>
+			</div>
+			<div id="lllllll">
+				<ul>
+					<li>
+						<div id="ke1">
+							<i>学员故事</i>
+							<p>由微软亚洲研究院呈现的人工智能公开课，现免费面向所有开发者，助力开发属于你自己的开发出自己的智能服务，欢迎学习。</p>
+						</div>
+						<div id="ke2">
+							<img src="../../极客学院/student_3_6349af5.jpg" alt="" />
+							<p>杨起峰</p>
+							<span>入职 菜市场</span>
+						</div>
+					</li>
+					<li>
+						<div id="ke1">
+							<i>学员故事</i>
+							<p>由微软亚洲研究院呈现的人工智能公开课，现免费面向所有开发者，助力开发属于你自己的开发出自己的智能服务，欢迎学习。</p>
+						</div>
+						<div id="ke2">
+							<img src="../../极客学院/student_3_6349af5.jpg" alt="" />
+							<p>杨起峰</p>
+							<span>入职 菜市场</span>
+						</div>
+					</li>
+					<li>
+						<div id="ke1">
+							<i>学员故事</i>
+							<p>由微软亚洲研究院呈现的人工智能公开课，现免费面向所有开发者，助力开发属于你自己的开发出自己的智能服务，欢迎学习。</p>
+						</div>
+						<div id="ke2">
+							<img src="../../极客学院/student_3_6349af5.jpg" alt="" />
+							<p>杨起峰</p>
+							<span>入职 菜市场</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		<div id="footer"></div>
+	</body>
+</html>

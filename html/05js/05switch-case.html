@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var now=new Date();          /*获取当前时间*/
+			var day=now.getDay();        /*获取星期几，0：星期日，1~6：星期一~六*/
+			switch(day){
+				case 0:document.write("星期日");break;
+				case 1:document.write("星期一");break;
+				case 2:document.write("星期二");break;
+				case 3:document.write("星期三");break;
+				case 4:document.write("星期四");break;
+				case 5:document.write("星期五");break;
+				case 6:document.write("星期六");break;
+				default:alert("错误！");break;/*当day的值不是case里的任何值时执行此语局*/    
+			}
+			document.write("<br />")
+			/*练习：判断是工作日还是休息日*/
+			switch(day){
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:document.write("工作日");break;
+				case 0:
+				case 6:document.write("休息日");break;
+				default:alert("错误！");break;
+			}
+		</script>
+	</body>
+</html>

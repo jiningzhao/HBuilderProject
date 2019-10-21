@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位_绝对定位</title>
+		<style type="text/css">
+			/*position的四个属性：开销大，推荐用浮动
+			 * 默认static
+			 * relative:相对定位，相对本该在的位置进行定位，脱标占位（脱离标准流，但占位）
+			 * absolute:绝对定位，相对离他最近的定位父级的定位，若父级无定位，相对浏览器窗口定位，脱标不占位
+			 * 父相对定位，子绝对定位。
+			 * fix:固定定位，相对浏览器窗口，对元素进行定位，不随滚动条移动
+			 */
+			/*z-index:堆叠位置，默认0，最大值999，数值大的显示在上方，小的压在下面
+			 必须和定位结合用*/
+			#outer{
+				width: 300px;
+				height: 300px;
+				border: 5px solid black;
+				left: 50px;
+				top: -50px;
+				position: relative;
+				/*position: absolute;*/
+				/*position: static;*/
+			}
+			#inner{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/*绝对定位，相对于窗口的位置，与父级的位置无关*/
+				left: 50px;
+				top: -50px;
+				position: absolute;
+				z-index: -1;
+			}
+			#bottombox{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>段落文字</p>
+		<p>段落文字</p>
+		<p>段落文字</p>
+		<p>段落文字</p>
+		<p>段落文字</p>
+		<div id="outer">
+			<div id="inner">
+				
+			</div>
+		</div>
+		<div id="bottombox"></div>
+	</body>
+</html>

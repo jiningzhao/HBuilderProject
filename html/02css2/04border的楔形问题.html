@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>border的楔形问题</title>
+		<style type="text/css">
+			#myborder{
+				width: 0px;             /*width和height改为0变成四个三角*/
+				height: 0px;
+				background-color: white;
+				border-width: 50px;   /*边框宽度*/
+				border-style: solid;
+				border-top-color: red;
+				border-right-color: transparent;    /*变成透明，IE9以上支持*/
+				border-bottom-color: transparent;
+				border-left-color: transparent;
+				
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="myborder"></div>
+		<p>利用border的楔形，可以通过代码完成三角、梯形的生成，而不用图片</p>
+		<p>如果只需要一个三角形，可以将其他便设为和背景色一样，或透明</p>
+	</body>
+</html>

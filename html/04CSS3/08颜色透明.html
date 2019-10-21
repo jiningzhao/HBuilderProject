@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>颜色透明</title>
+		<style type="text/css">
+			#rgb{
+				width: 100px;
+				height: 100px;
+				/*老的设置方法*/
+				/*background-color: #FF0000;*/   /*RGB颜色*/
+				/*opacity: 0.3;*/
+				/*filter: alpha(opacity:30);*/
+				/*新的设置方法*/
+				background: rgba(255,0,0,0.3);    /*红，绿，蓝，透明度，十进制*/
+			}
+			#hsl{
+				width: 100px;
+				height: 100px;
+				background: hsla(100,50%,50%,0.3);
+				/*background: hsl(100,50%,50%);*/
+				/*h:色相0~360;s:饱和度0~100%;l:亮度0~100%;a:透明度0~1;*/
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="rgb"></div>
+		<div id="hsl"></div>
+	</body>
+</html>

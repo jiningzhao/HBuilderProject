@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function sum(a,b){
+				var real=arguments.length;
+				var frm=sum.length;
+				if(real<frm){
+					var e=new Error();
+					e.number=100001;
+					e.message="实际参数个数不符合要求！";
+					throw e;
+				}
+				return a+b;
+			}
+			try{
+				document.write("<p><h1>arguments对象测试</h1></p>");
+				document.write("正确调用的结果："+sum(10,20));
+				document.write("<br>不符合规则的调用结果：");
+				document.write(sum(10));
+			}
+			catch(e){
+				alert(e.number+"错误号："+e.message);
+			}
+		</script>
+	</body>
+</html>

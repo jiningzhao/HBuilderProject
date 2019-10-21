@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性选择器</title>
+		<style>
+			[title]{
+				color: gold;           /*具有title属性的*/
+			}
+			a[title]{
+				background-color: #A9A9A9;
+			}
+			[title="这是2"]{
+				color:white
+			}
+			[title*="这是"]{
+				color: pink;
+			}
+			[title^="段落"]{
+				color: greenyellow;
+			}
+			[title$="落"]{
+				color: #0000FF;
+			}
+			[title~="文字2"]{        /*元素的属性值用空格分隔，且其中有"文字2"*/
+				color: darkblue;
+			}
+			[title|="段落"]{         /*以val开头，用"-"分隔*/
+				color: red;
+			}
+			/*最后两个不重要*/
+		</style>
+	</head>
+	<body>
+		<a href="#">超链接1</a>
+		<a href="#" title="这是2">超链接2</a>
+		<a href="#">超链接3</a>
+		<a href="#" title="这是4">超链接4</a>
+		
+		<p title="段落文字1">这是段落1</p>
+		<p title="段落 文字2">段落文字2</p>
+		<p title="段落-文字3">段落文字3</p>
+	</body>
+</html>

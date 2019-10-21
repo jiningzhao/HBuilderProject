@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function a(){
+				function b(){
+					function c(){
+						document.write("<li>C</li>");
+					}
+					document.write("<li>B</li>");
+				}
+				document.write("<li>A</li>");
+				b();
+				c();
+			}
+			a();
+		</script>
+	</body>
+</html>

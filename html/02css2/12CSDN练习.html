@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSDN登录页面</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;       /*去掉下划线*/
+			}
+			a:hover{
+				color: red;
+				text-decoration: underline;
+			}
+			body{
+				/*background-image: url(../../img/546ea7b53f1ec.jpg);*/
+				font-size: 14px;
+				color:#333;
+				font-family: "微软雅黑","arial, helvetica, sans-serif";
+			}
+			#conntent{
+				width: 900px;
+				height: 527px;
+				margin: 50px auto;
+				/*background-color: beige;*/
+			}
+			.leftDiv{
+				float: left;
+				margin-right: 15px;
+			}
+			.rightDiv{
+				width: 348px;
+				height: 527px;
+				float: left;
+				border: 1px solid #CCCCCC;
+				border-radius: 5px;
+			}
+			.top{
+				height: 50px;
+				/*background-color: red;*/
+				padding-top: 30px;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+			.top h3{
+				float: left;
+			}
+			.top a{
+				float: right;
+			}
+			.form{
+				height: 220px;
+				/*background-color: gold;*/
+				padding: 0 30px;             /*上下边距为0，左右边距为30px*/
+			}
+			.form a{
+				color: black;
+				float: right;
+			}
+			[type='text'],[type='password'],[type='submit']{
+				width: 280px;
+				height: 46px;
+				margin-bottom: 20px;
+			}
+			[type="submit"]{
+				background-color: red;
+				color: white;
+				font-size: 18px;
+				font-family: "微软雅黑";
+				margin-top: 20px;
+			}
+			.line{
+				height: 40px;
+				/*background-color: green;*/
+				border-bottom: 1px solid #ccc;
+			}
+			.bottom{
+				height: 185px;
+				/*background-color: gray;*/
+				padding: 30px;
+			}
+			.icons{
+				margin: 20px 0;
+				height: 33px;
+				width: 220px;
+				background-image: url(../../img/login-third-party-new.png);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="conntent">
+			<div class="leftDiv">
+				<a href="https://edu.csdn.net/huiyiCourse/detail/870?utm_source=login"><img src="../../img/0f0002JDyP0hj1UzLGhM-6.png"/></a>
+			</div>
+			<div class="rightDiv">
+				<div class="top">
+					<h3>账号登录</h3>
+					<a href="#">扫码登录</a>
+				</div>
+				<div class="form">
+					<form action="">
+						<input type="text" style="background-color: transparent;" placeholder="请输入用户名/邮箱/手机号" name="" id="" value="" />
+						<input type="password" style="background-color: transparent;" placeholder="输入密码" name="" id="" value="" /><br />
+						<input type="checkbox" />下次自动登录
+						<a href="#">忘记密码</a><br />
+						<input type="submit" name="" id="" value="登录" />
+					</form>
+					
+				</div>
+				<div class="line"></div>
+				<div class="bottom">
+					<p>第三方账号登录</p>
+					<div class="icons"></div>
+					<p>还没有CSDN账号？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">立即注册</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

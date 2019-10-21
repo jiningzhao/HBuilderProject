@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态伪类选择器</title>
+		<style type="text/css">
+			a:link{             /*未访问时超链接的效果*/
+				color: black;
+			}
+			a:visited{
+				color: gold;
+			}
+			
+			a:hover{
+				color: yellowgreen;
+			}
+			a:active{
+				color: red;
+			}
+			input:focus{background-color: #666666;}
+		</style>
+	</head>
+	
+	<body>
+		<a href="http://www.baidu.com">百度首页</a>
+		<a href="http://www.163.com">网易</a>
+		<p></p>
+		
+		<form action="">
+			用户名：<input type="text" name="" id="" /><br />
+			密码：<input type="password" name="" id="" /><br />
+			<input type="submit" id="" name="" value="登录"/>
+		</form>
+	</body>
+</html>

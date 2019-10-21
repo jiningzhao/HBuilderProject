@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义JavaScript对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*1.通过new运算符创建Object对象*/
+			var box=new Object();
+			box.name="张三";   /*添加属性name*/
+			box.age=28;      /*添加属性age*/
+			box.printPr=function(){
+				document.write("我是printPr方法"+"<hr />");
+			};
+			document.write(box.name+" "+box.age+"<hr />");
+			box.printPr();
+			
+			/*2.字面量方式*/
+			var jiliCar={    /*对象名叫jiliCar*/
+				brand:"吉利", /*三个属性*/
+				color:"白色",
+				no:"辽B88888",
+				run:function(){
+					document.write("吉利汽车会跑！"+"<hr />");
+				}
+			};
+			document.write(jiliCar.color+"<hr />");
+			jiliCar.run();
+			
+			
+			
+		</script>
+	</body>
+</html>

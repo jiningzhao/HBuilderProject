@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--分别用while和do-while计算1~10的累加和-->
+		<script type="text/javascript">
+			/*while-do*/
+			var i=10;
+			var sum=0;
+			while(i>0){
+				sum+=i;
+				i--;
+			}
+			document.write(sum,"<br />");
+			/*do-while*/
+			var i1=10;
+			var sum1=0;
+			do{
+				sum1+=i1;
+				i1--;
+			}while(i1>0);                   /*无论是否满足（）内的条件，循环语句都被至少执行一次*/
+			document.write(sum1,"<br />");
+			
+			/*for循环*/
+			for(var i2=10,sum2=0;i2>0;i2--){  /*()内3个语句，可以省略语句但不能省略分号*/
+				sum2+=i2;
+			}
+			document.write(sum2,"<hr />");
+			
+			/*for(;;){...}--------死循环*/
+			/*练习：用for循环完成，计算100以内所有非整十偶数的和*/
+			document.write("练习：用for循环完成，计算100以内所有非整十偶数的和?","<hr />");
+			
+			for(var i3=0,sum3=0;i3<=100;i3+=2){
+				if(i3%10==0)
+					continue;
+				sum3+=i3;
+			}
+			document.write(sum3,"<hr />")
+			
+			/*练习：用for循环完成斐波那契序列，1,1,2,3,5,8...前20项*/
+			/*若出现大于1000的数，不继续打印*/
+			document.write("练习：用for循环完成斐波那契序列，1,1,2,3,5,8...前20项?","<hr />");
+			for(var i3=1,f1=0,f2=1;i3<=20;i3++){
+				document.write(f2,"、")
+				var f3=f1+f2;
+				f1=f2;
+				f2=f3;
+				if(f2>1000){
+					break;
+				}	
+			}
+			document.write("<hr />")/*和python的for...else比较*/
+		</script>
+	</body>
+</html>

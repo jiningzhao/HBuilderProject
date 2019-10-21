@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS选择器</title>
+		<style type="text/css">
+		    *{             /*通配符选择器，针对所有*/
+		    	margin:0;
+		    	padding:0;
+		    }
+			/*----------------基本选择器----------------------*/
+			div{             /*类型选择器，选择器的名字就是html的标签名*/
+				color: blue; /*设置字体颜色*/
+			}
+			#box1{           /*id选择器，设置样式时前面加#，唯一的*/
+				color: red;
+			}
+			.box2{           /*class选择器，设置样式时前面加.*/
+				color: lawngreen;
+			}
+			/*群组选择器，逗号分隔*/
+			h1,h2,.p1{color: blueviolet;}
+			
+			/*后代选择器*/
+			div p{color: olive;}
+			
+			/*指定选择符，取交集，注意没有空格*/
+			div.one{background-color: #FFD700;}
+			p.two{background-color: chartreuse;}
+			
+			/*伪类选择器*/
+			a{
+				color: black;
+				text-decoration: none; /*去掉下划线*/
+				}
+			a:hover{           /*伪类选择器,鼠标悬停时的效果*/
+				color: #FF0000;
+				text-decoration: underline; /*有下划线*/
+				}
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		<!--基本选择器，三种：类型选择器，id选择器，class选择器-->
+		<div>基本选择器</div>
+		<div id="box1">id选择器</div> <!--命名的时候不能是数字开头，不能是-数字开头，由“数字、字母、-、_”组成-->
+		<div class="box2">class选择器</div>
+		<p class="box2">文本</p>    <!--class可以用在多个地方-->
+		
+		<h1>标题一</h1>
+		<h2>标题二</h2>
+		<p class="p1">文本2</p>
+		
+		<div>                  <!--后代选择器，p是div的孩子，即后代-->
+			<p>后代选择器</p>
+		</div>
+		
+		<!--指定选择符，取交集，注意没有空格-->
+		<div class="one">divone</div>
+		<div class="two">divtwo</div>
+		<p class="one">pone</p>
+		<p class="two">ptwo</p>
+		
+		<!--伪类选择器-->
+		<a href="#">超链接</a>
+		
+	</body>
+</html>

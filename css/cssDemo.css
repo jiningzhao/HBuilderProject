@@ -1,0 +1,5 @@
+#box2{  /*外部样式表，写在css文件内*/
+	width: 100%;
+	height: 200px;
+	background-color: gold;
+}

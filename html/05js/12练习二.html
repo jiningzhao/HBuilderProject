@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				color: black;
+				text-decoration: none;
+				font-size: 30px;
+			}
+			a:hover{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="javascript:sum()">点击获取所有水仙花数及其他们的和</a>
+		<!--写一个函数，判断一个数是否是水仙花数-->
+		<!--水仙花数是指一个三位数，其各位数字立方和等于该数字本身-->
+		<!--计算所有水仙花数的和。-->
+		<script type="text/javascript">
+			function sum(){
+				for(var i=100,f=0,sum=0;i<=999;i++){
+					sum+=flower(i);
+				}
+				document.write("<hr />所有水仙花数的和为："+sum);
+			function flower(a){
+				n1=parseInt(a/100);
+				n2=parseInt(a%100/10);
+				n3=a%10;
+				if(n1*n1*n1+n2*n2*n2+n3*n3*n3==a){
+					f++;
+					document.write("水仙花数"+f+" : "+a+"<br />")
+					return a;
+				}
+				else{
+					return 0;
+				}
+			}
+			}
+		</script>
+	</body>
+</html>

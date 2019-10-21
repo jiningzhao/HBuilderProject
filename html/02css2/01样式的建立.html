@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS样式的建立</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box1{ /*内部样式表，写在html文件head>style内*/
+				width: 100%;
+				height: 200px;
+				background-color: chartreuse;
+			}
+		</style>
+		<!--引入外部样式表（推荐）-->
+		<link rel="stylesheet" type="text/css" href="../../css/cssDemo.css"/> 
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+		
+		<!--内联样式/行内样式（不推荐）-->
+		<div id="box3" style="width: 100%;height: 200px;background-color: dodgerblue;"></div>   
+	</body>
+</html>

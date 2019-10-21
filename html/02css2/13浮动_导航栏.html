@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>利用浮动做导航栏</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				/*将height属性去掉后，ul的背景色看不到，ul的高度为0————高度塌陷*/
+				/*当内层元素浮动时，如果外层没有设置浮动，外层就会出现高度塌陷
+				 解决方案：1.在内层加一个空的div，设置成clear:both
+				        2.给高度塌陷的标签，加上overflow:hidden*/
+				list-style: none;
+				width: 1000px;
+				height: 50px;
+				background-color: darkblue;
+				margin: 0 auto;
+				overflow: hidden;         /*解决高度塌陷的方案2*/
+			}
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			a:hover{
+				color: red;
+			}
+			li{
+				width: 12.5%;
+				float: left;
+				text-align: center;
+				line-height: 50px;
+				font-family:"微软雅黑" ;
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<li><a href="#">学校概况</a></li>
+			<div style="clear: both;"></div>     <!--解决高度塌陷方案1-->
+		</ul>
+	</body>
+</html>

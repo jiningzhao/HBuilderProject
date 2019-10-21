@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>边框</title>
+		<style type="text/css">
+			#radiustest{
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				/*border: 2px solid black;*/
+				border-width: 2px;
+				border-color: black;
+				border-style: solid;
+				border-radius: 10%;        /*可以写像素/百分比，当值是width一半时变成圆形*/
+				border-top-right-radius: 50%;
+				text-align: center;       /*设置完圆角后，通常需要居中显示*/
+				line-height: 100px;
+			}
+			#shadowtest{
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				box-shadow: 5px 5px 5px blue;  /*阴影的水平偏移，垂直偏移，模糊，颜色*/
+			}
+			#borderimg1{
+				border: 10px solid transparent;        /*为了显示边框图片，边框必须有宽度，透明*/
+				border-image: url(../../img/border.png) 33% round;   /*33%是切割尺寸*/
+			}
+			#borderimg2{
+				border: 10px solid transparent;        /*为了显示边框图片，边框必须有宽度，透明*/
+				padding: 15px;
+				border-image: url(../../img/border.png) 35% stretch;   /*33%是切割尺寸*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="radiustest">123456</div>
+		<br />
+		<hr />
+		<br />
+		<div id="shadowtest"></div>
+		<br />
+		
+		<p id="borderimg1">在这里，图像平铺（重复），以填补该地区</p>
+		<p id="borderimg2">在这里，图像拉伸（不重复），以填补该地区</p>
+	</body>
+</html>

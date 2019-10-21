@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="num1" />
+		<span id="">+</span>
+		<input type="text" name="" id="num2" />
+		<input type="button" value="=" id="btn"/>
+		<input type="text" name="" id="num3" />
+		
+		<script type="text/javascript">
+			/*1.找到页面上的DOM节点*/
+			var oNum1=document.getElementById("num1");
+			var oNum2=document.getElementById("num2");
+			var oNum3=document.getElementById("num3");
+			var oBtn=document.getElementById("btn");
+			/*2.事件：页面对用户的响应*/
+			oBtn.onclick=function(){
+				oNum3.value=parseInt(oNum1.value)+parseInt(oNum2.value);
+			}
+		</script>
+	</body>
+</html>

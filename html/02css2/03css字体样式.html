@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字体样式</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#p1{
+				
+				border-bottom: 3px double blue;
+			}
+			#p2{
+				font-size: 50px;         /*字体大小*/
+				color: darkgray;         /*字体颜色*/
+				/*字体，多个备选防止用户电脑上没有，中文和多单词时需要有双引号*/
+				font-family: "微软雅黑",arial,elephant;
+				font-weight: 900;       /*字体加粗，500正常值，600~900加粗，100~400细*/
+				font-style: italic;     /*倾斜，默认normal*/
+				text-indent: 2em;        /*行首缩进2字符大小*/
+				/*border: 1px solid red;*/
+			}
+			div{
+				color: white;
+				width: 100%;
+				height: 100px;
+				background-color: dimgrey;
+			}
+			div p{
+				font: 30px/100px "微软雅黑";    /*字号大小/行高  字体*/
+				text-align: center;           /*水平居中*/
+				line-height: 100px;           /*让line-hight和容器高度一样，达到垂直居中效果*/
+				letter-spacing: 2px;          /*字母间距*/
+				word-spacing: 10px;           /*单词间距*/
+				text-decoration: line-through;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p1">文本段落1</p>
+		<p id="p2">文本段落2</p>
+		<div>
+			<p>hello world</p>
+			<p></p>
+		</div>
+		
+	</body>
+</html>

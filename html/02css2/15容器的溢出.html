@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>容器溢出</title>
+		<style>
+			div{
+				border: 1px solid black;
+				/*div不设置宽高时由内部的内容撑开*/
+				width: 200px;
+				height: 200px;
+				/*文字超出div范围————溢出*/
+				/*auto最常用，若没有溢出不出现滚动条，若有溢出有滚动条*/
+				/*overflow: hidden;*/         
+				/*overflow: visible;*/
+				/*overflow: scroll;*/
+				overflow: auto;       
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>节、女儿节或团圆节，是流行于中国众多民族与汉字文化圈诸国的传统文化节日，时在农历八月十五；因其恰值三秋之半，故名，也有些地方将中秋节定在八月十六。中秋节始于唐朝初年，盛行于宋朝，至明清时，已成为与春节齐名的中国传节、女儿节或团圆节，是流行于中国众多民族与汉字文化圈诸国的传统文化节日，时在农历八月十五；因其恰值三秋之半，故名，也有些地方将中秋节定在八月十六。中秋节始于唐朝初年，盛行于宋朝，至明清时，已成为与春节齐名的中国传</p>
+		</div>
+	</body>
+</html>

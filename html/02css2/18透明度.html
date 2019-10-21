@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>透明度</title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: gold;
+				margin: 20px;
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				background-color: gold;
+				margin: 20px;
+				/*透明度设置*/
+				/*opacity取值范围0~1,1不透明。0全透，存在浏览器兼容问题*/
+				opacity: 0.5;
+				/*IE8及更早的版本用filter设置透明度，取值范围0-100*/
+				/*filter: alpha(opacity=30);*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>

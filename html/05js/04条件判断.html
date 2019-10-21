@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--用一个变量记录学生的成绩百分制的，判断A(90~100),B(80~89),C(70~79),D(60~69),E(小于60)等级-->
+		<script type="text/javascript">
+			var score=89;
+			if(score>100){
+				var T="成绩应该为0~100";
+			}
+			else if(score>=90){
+				var T="A";
+			}
+			else if(score>=80){
+				var T="B";
+			}
+			else if(score>=70){
+				var T="C";
+			}
+			else if(score>=60){
+				var T="D";
+			}
+			else if(score>=0){
+				var T="E";
+			}
+			else{
+				var T="成绩应该为0~100";
+			}
+			document.write("分数为:",score,"<br />等级为:",T);
+		</script>
+	</body>
+</html>

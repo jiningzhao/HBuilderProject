@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结构伪类选择器</title>
+		<style type="text/css">
+			li:first-child{
+				color: red;
+			}
+			li:last-child{
+				color: greenyellow;
+			}
+			li:nth-child(2){
+				color: #0000FF;
+			}
+			li:nth-last-child(2){   /*编号从1开始*/
+				color: gold;
+			}
+			h1:nth-of-type(2n){
+				color: palevioletred;
+			}
+			table{
+				border-collapse: collapse;
+				text-align: center;
+			}
+			td{
+				width: 100px;
+				height: 30px;
+				border: 1px solid black;
+			}
+			tr:nth-of-type(2n){
+				background-color: pink;
+			}
+			tr:nth-of-type(2n-1){
+				background-color: blanchedalmond;
+			}
+		</style>
+	</head>
+	<body>
+		<!--ul>(li{第$个})*4-->
+		<ul>
+			<li>第1个</li>
+			<li>第2个</li>
+			<li>第3个</li>
+			<li>第4个</li>
+		</ul>
+		
+		<h1>一级标题1</h1>
+		<h1>一级标题2</h1>
+		<h1>一级标题3</h1>
+		<h1>一级标题4</h1>
+		
+		<!--创建一个7*5的表格，用css设置样式，要求隔行变色-->
+		<table>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+			<tr>
+				<td>第1格</td>
+				<td>第2格</td>
+				<td>第3格</td>
+				<td>第4格</td>
+				<td>第5格</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

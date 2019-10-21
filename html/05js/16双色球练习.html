@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*模拟双色球抽奖，从1~33中摇出5个球（隐藏条件：这5个球不能重复）*/
+			var arr=[];
+			arr.push(parseInt(Math.random()*33+1));
+			var n=0;
+			do{
+				var no=parseInt(Math.random()*33+1);
+				for(var i in arr){
+					if(arr[i]==no){
+						n=0;
+						document.write("["+no+"]<br />");
+						break;
+					}
+					n=1;
+				}
+				if(n==1){
+					arr.push(no);
+				}
+			}while(arr.length<5)
+			document.write("五个双色球为："+arr);
+		</script>
+	</body>
+</html>

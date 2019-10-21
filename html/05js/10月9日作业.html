@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--1.用户点击提交时，判断用户名长度，要求在6~12个字符之间，
+			          若长度错误，通过alert提示
+		-->
+		<form action="">
+			用户名：<input type="text" name="" id="ch1" />
+			<input type="submit" value="提交" id="ch2"/>
+			<input type="reset" value="重置" id="ch3"/>
+		</form>
+		<script type="text/javascript">
+				var t1=document.getElementById("ch1");
+				var t2=document.getElementById("ch2");
+				var t3=document.getElementById("ch3");
+				
+				t2.onclick=function(){
+					if(t1.value.length<6||t1.value.length>12){
+						alert("用户名长度要求在6~12个字符之间");
+					}
+				}
+		</script>
+		
+		<!--2.在页面输入圆的半径，计算圆的面积、周长，并显示在页面中，要求小数点后保留两位
+			方法1：toFixed()
+			方法2：parseInt(数据*100)/100
+		-->
+		<hr />
+		请输入圆的半径(厘米)：<input type="text" name="" id="case1" /><br />
+		圆的面积为：<input type="text" name="" id="case2" /><br />
+		圆的周长为：<input type="text" name="" id="case3" />
+		<hr />
+		<script type="text/javascript">
+			var c1=document.getElementById("case1");
+			var c2=document.getElementById("case2");
+			var c3=document.getElementById("case3");
+			
+			c1.onblur=function(){
+				c2.value=(c1.value*c1.value*Math.PI).toFixed(2)+"平方厘米";
+				c3.value=(c1.value*2*Math.PI).toFixed(2)+"厘米";
+			}
+		</script>
+		
+		<!--3.用户在页面输入身份证号码，提取出用户的出生年月日，显示在页面上
+			计算用户的年龄，显示在页面上
+		-->
+		请输入身份证号码：<input type="text" name="" id="num1" /><br />
+		您的出生年月日为：<input type="text" name="" id="num2" /><br />
+		年龄为：<input type="text" name="" id="num3" />
+		
+		<script type="text/javascript">
+			var n1=document.getElementById("num1");
+			var n2=document.getElementById("num2");
+			var n3=document.getElementById("num3");
+			
+			n1.onblur=function(){
+				var year=parseInt(n1.value.slice(6,10));
+				var month=parseInt(n1.value.slice(10,12))-1;
+				var day=parseInt(n1.value.slice(12,14));
+				n2.value=n1.value.slice(6,10)+"年"+n1.value.slice(10,12)+"月"+n1.value.slice(12,14)+"日";
+				var agehaomiao=new Date(year,month,day);
+				var now=new Date();
+				var age=now.getTime()-agehaomiao.getTime();
+				n3.value=parseInt(age/(365*24*60*60*1000));
+			}
+		</script>
+	</body>
+</html>

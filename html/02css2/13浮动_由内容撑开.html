@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动</title>
+		<style type="text/css">
+
+			#header{
+				width: 100%;
+				height: 60px;
+				background-color: gold;
+			}
+			/*内层高度设为外层的100%，外层高度不设置时，高度由内容撑开*/
+			#content{
+				width: 100%;
+				/*height: 500px;*/
+				background-color: greenyellow;
+			}
+			#content div{
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			#footer{
+				width: 100%;
+				height: 50px;
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="content">
+			<div style="background-color: brown;">left</div>
+			<div style="background-color: peachpuff;">right</div>
+		</div>
+		<div id="footer"></div>
+	</body>
+</html>

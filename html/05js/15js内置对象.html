@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Global对象,URI编码*/
+			var str="//张三";
+			var box1=encodeURI(str);           /*特殊字符没有进行编码*/
+			var box2=encodeURIComponent(str);  /*特殊字符也进行编码了*/
+			var str1=decodeURI(box1);         /*还原*/
+			var str2=decodeURIComponent(box2) /*还原*/
+			
+			document.write(box1+"<br />");
+			document.write(box2+"<br />");
+			document.write(str1+"<br />");
+			document.write(str2+"<hr />");
+			
+			/*eval方法：将字符串变成表达式*/
+			eval("var box=100");              /*相当于创建变量box，值为100*/
+			document.write(box+"<br />");
+			eval("document.write(box+'<br />');");
+			eval("function f1(){return 123;}");
+			document.write(f1()+"<hr />");
+			
+			/*Date对象*/
+			var now=new Date();    /*获取当前时间日期，从当前的计算机取系统时间*/
+			var year=now.getFullYear();   /*年*/
+			var month=now.getMonth()+1;   /*月*/
+			var day=now.getDate();        /*日*/
+			var xing=now.getDay();        /*星期0~6*/
+			var hour=now.getHours();      /*时*/
+			var minute=now.getMinutes();  /*分*/
+			var second=now.getSeconds();  /*秒*/
+			var time=[hour,minute,second];
+			var xingqi=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+			document.write(year,"年",month,"月",day,"日，",xingqi[xing],"，",time.join(":")+"<hr />")
+			
+			/*练习*/
+			var Christmas=new Date("2025/12/25");     /*2025-12-25*/
+			var Christmas1=new Date(2025,11,25);      /*2025-12-25*/
+			var Christmasxingqi=Christmas.getDay();
+			var Christmaszhijin=Christmas.getTime()-now.getTime();
+			var dayNum=parseInt(Christmaszhijin/(24*60*60*1000))+1;
+			document.write("2025年的圣诞节是星期几？"+xingqi[Christmasxingqi]+"<br />");
+			document.write("2025年的圣诞节距离现在多少天？"+dayNum+"天<hr />");
+			
+			var haomiao=new Date(110254671000);
+			var year1=haomiao.getFullYear();   /*年*/
+			var month1=haomiao.getMonth()+1;   /*月*/
+			var day1=haomiao.getDate();        /*日*/
+			var xing1=haomiao.getDay();        /*星期0~6*/
+			var hour1=haomiao.getHours();      /*时*/
+			var minute1=haomiao.getMinutes();  /*分*/
+			var second1=haomiao.getSeconds();  /*秒*/
+			var time1=[hour1,minute1,second1];
+			document.write("110254671000代表的具体时间？"+year1,"年",month1,"月",day1,"日，",xingqi[xing1],"，",time1.join(":")+"<br />")
+			
+			/*to方法,将时间转成字符串*/
+			document.write("<br />"+now.toGMTString()+"<br />");    /*GMT时间*/
+			document.write("<br />"+now.toLocaleString()+"<br />");  
+			
+			/*parse方法，由字符串转换成时间*/
+			document.write(Date.parse("March 12,2012")+"<br />");
+			document.write(Date.parse("2012/3/12")+"<br />");
+			document.write(Date.parse("2012-3-12")+"<br />");
+			/*UTC,将时间转成ms*/
+			document.write(Date.UTC(2012,2,12)+"<hr />");   /*2012年3月12日*/
+			
+			
+			/*-------------------------Math对象-----------------------------------*/
+			/*求半径为3的圆的面积*/
+			var area=Math.PI*3*3;
+			document.write(area.toFixed(2)+"<br />");/*X.toFixed()对数字进行四舍五入*/
+			/*最大值*/
+			document.write(Math.max(12,45,6,5,78,45)+"<br />");/*Math.max()求最大值*/
+			/*随机数*/
+			document.write(Math.random()*10+"<br />");/*Math.random()返回0~1的随机数(含0，不含1)*/
+			/*得到0~10之间的随机整数*/
+			document.write(parseInt(Math.random()*11)+"<hr />");
+			
+			/*---------------------------String对象---------------------------------*/
+			/*创建String对象*/
+			var str1="Hello";
+			var str2=new String("world");
+			document.write(str1.charAt(1)+"<br />");/*得到下标为1的字符，下标从0开始算*/
+			document.write(str1.charCodeAt(1)+"<br />");/*得到下标为1的字符编码，下标从0开始算*/
+			var str3=str1.concat(" "+str2);/*连接两个字符串*/
+			document.write(str3+"<br />");
+			document.write(str3.indexOf("o")+"<br />");/*查找指定字符的下标*/
+			document.write(str3.lastIndexOf("o")+"<br />");/*查找指定字符的下标,从右向左找*/
+			var str4=str3.replace("world","Python"); /*将str3中的world替换成python*/
+			document.write(str4+"<hr />");
+			
+			/*Number对象方法*/
+			var box=1000.789;
+			document.write(box.toString()+"<br />");/*转换为字符串，传参可以转换进制*/
+			document.write(box.toLocaleString()+"<br />");/*本地形式，1,000.789*/
+			document.write(box.toFixed(2)+"<br />");/*小数点保留，1000.78*/
+			document.write(box.toExponential()+"<br />");/*指数形式，传参会保留小数点*/
+			document.write(box.toPrecision(3)+"<hr />");/*指数或点形式，传参保留小数点*/
+		</script>
+	</body>
+</html>

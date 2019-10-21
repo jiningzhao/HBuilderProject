@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格样式</title>
+		<style type="text/css">
+			table{
+				border-collapse: collapse;   /*将边框叠加在一起*/
+			}
+			th{
+				background-color:gold;
+				font: 18px "微软雅黑";
+				color: palevioletred;
+			}
+			table,th,tr,td{
+				border: 1px solid black;
+				width: 500px;           /*总宽度500px，平均分配各列*/
+				height: 60px;           /*一行的高度是60px*/
+				padding: 10px;
+				text-align: right;      /*水平方向右对齐*/
+				vertical-align: top;    /*垂直方向靠顶部对齐*/
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>     <!--第一行特殊，标题行-->
+				<th>姓</th>
+				<th>名</th>
+				<th>性别</th>
+			</tr>
+			<tr>
+				<td>张</td>
+				<td>三</td>
+				<td>男</td>
+			</tr>
+			<tr>
+				<td>李</td>
+				<td>四</td>
+				<td>女</td>
+			</tr>
+		</table>
+	</body>
+</html>
